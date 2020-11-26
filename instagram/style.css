@@ -113,18 +113,20 @@ body {
     padding: 1rem;
 }
 
-.app-download {
-    height: 3rem;
-    width: 10rem;
-    background-size: cover;
-}
+
 
 .app-download:nth-child(1) {
     background-image: url(appstore.png);
+    height: 4rem;
+    width: 12rem;
+    background-size: cover;
 }
 
 .app-download:nth-child(2) {
     background-image: url(playstore.png);
+    height: 4rem;
+    width: 13rem;
+    background-size: 100%;
 }
 
 @media (max-width: 1024px) {
