@@ -62,7 +62,7 @@ namespace ASPNET.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, dataValueField: "Id", dataTextField: "Descricao", produto.CategoriaId);
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, dataValueField: "Id", dataTextField: "Descricao", produto.Categoria.Id);
             return View(produto);
         }
 
@@ -79,7 +79,7 @@ namespace ASPNET.Controllers
             {
                 return NotFound();
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, dataValueField: "Id", dataTextField: "Descricao", produto.CategoriaId);
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, dataValueField: "Id", dataTextField: "Descricao", produto.Categoria.Id);
             return View(produto);
         }
 
@@ -115,7 +115,7 @@ namespace ASPNET.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, dataValueField: "Id", dataTextField: "Descricao", produto.CategoriaId);
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, dataValueField: "Id", dataTextField: "Descricao", produto.Categoria.Id);
             return View(produto);
         }
 
